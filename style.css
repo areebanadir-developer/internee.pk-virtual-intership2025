@@ -1,0 +1,229 @@
+:root {
+      --bg-color: #0f1114;
+      --card-bg: rgba(20, 23, 25, 0.95);
+      --accent: #2ecc71;
+      --muted: #bfc7c9;
+      --error: #ff6b6b;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      color: #e6eef0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .wrap {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      box-sizing: border-box;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 440px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+
+    header h1 {
+      margin: 0 0 6px 0;
+      font-size: 20px;
+      color: var(--accent);
+      letter-spacing: 0.2px;
+    }
+
+    header p {
+      margin: 0 0 14px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    form {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+      align-items: center;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.02);
+      color: #eaf6f6;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input[type="text"]::placeholder {
+      color: #9fb1b3;
+    }
+
+    button {
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 0;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(180deg, #3ad06a, #12b34a);
+      color: #03110a;
+    }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .small-actions {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+      align-items: center;
+    }
+
+    .info {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .result {
+      display: none;
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .result.visible {
+      display: flex;
+    }
+
+    .icon {
+      width: 84px;
+      height: 84px;
+      flex: 0 0 84px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.15);
+      font-size: 48px;
+    }
+
+    .meta {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .meta .temp {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .meta .desc {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .meta .rows {
+      display: flex;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .message {
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .message.error {
+      color: var(--error);
+      font-weight: 700;
+    }
+
+    .message.success {
+      color: #8ff0b1;
+    }
+
+    .loader {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 3px solid rgba(255, 255, 255, 0.08);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: background-image 0.6s ease, filter 0.6s ease;
+      filter: brightness(0.5);
+    }
+
+    footer {
+      margin-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    @media (max-width:420px) {
+      .card {
+        padding: 14px;
+        border-radius: 12px;
+      }
+
+      .icon {
+        width: 68px;
+        height: 68px;
+        font-size: 40px;
+        flex: 0 0 68px;
+      }
+    }

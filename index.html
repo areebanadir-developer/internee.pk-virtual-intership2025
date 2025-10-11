@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Fetch API</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="bg" id="bg"></div>
+    <div class="wrap">
+        <div class="card" role="region" aria-labelledby="title">
+
+            <header>
+                <h1 id="title">Weather App 🌤️</h1>
+                <p>Enter a city to fetch current weather (fetch API + JSON + DOM)</p>
+            </header>
+
+            <form id="cityForm" autocomplete="off" novalidate>
+                <label for="city" class="sr-only">City name</label>
+                <input id="city" name="city" type="text" placeholder="Enter city name (e.g. London)"
+                    aria-label="City name" />
+                <button id="searchBtn" class="btn-primary" type="submit">Submit</button>
+            </form>
+
+            <div class="small-actions">
+                <button id="geoBtn" class="btn-ghost" type="button" title="Use my location">Use my location</button>
+                <div id="status" class="info" aria-live="polite"></div>
+            </div>
+
+            <div id="result" class="result" aria-live="polite">
+                <div class="icon" id="icon" aria-hidden="true">☀️</div>
+                <div class="meta">
+                    <div class="temp" id="temp">— °C</div>
+                    <div class="desc" id="description">—</div>
+                    <div class="rows">
+                        <div id="humidity">Humidity: —%</div>
+                        <div id="wind">Wind: — m/s</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="message" class="message" role="status" aria-live="polite"></div>
+
+            <footer>
+                <div>Features: fetch(), JSON, DOM update, geolocation</div>
+                <div>Units: metric</div>
+            </footer>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
