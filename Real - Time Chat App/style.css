@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #d9eff5;
+    ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 400px;
+    max-width: 95%;
+    height: 600px;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: solid #6e7172;
+}
+
+.chat-header {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 23px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: url(/image/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+
+.message {
+    max-width: 70%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    animation: fadeIn 0.3s ease;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.sent {
+    background: #007bff;
+    color: white;
+    align-items: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+.received {
+    background: #e8e8e8;
+    color: black;
+    align-items: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+.timestamp {
+    font-size: 10px;
+    opacity: 0.7;
+    margin-top: 3px;
+    text-align: right;
+    display: block;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.chat-input button {
+    padding: 12px 20px;
+    background: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.chat-input button:hover {
+    background: #0056b3;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
